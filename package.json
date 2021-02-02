@@ -1,0 +1,46 @@
+{
+  "name": "movieland-react-hooks-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwcberry/movieland-react-hooks-graphql.git"
+  },
+  "keywords": [
+    "react",
+    "jest",
+    "graphql"
+  ],
+  "author": "Peter Berry <nerd@travelsincode.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pwcberry/movieland-react-hooks-graphql/issues"
+  },
+  "homepage": "https://github.com/pwcberry/movieland-react-hooks-graphql#readme",
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 1 Safari version",
+    "last 2 Edge versions"
+  ],
+  "dependencies": {
+    "@apollo/client": "^3.3.7",
+    "@apollo/react-hooks": "^4.0.0",
+    "apollo-link-context": "^1.0.20",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0"
+  },
+  "devDependencies": {
+    "@apollo/react-testing": "^4.0.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/react-hooks": "^5.0.3",
+    "jest": "^26.6.3",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
+    "jest-styled-components": "^7.0.3"
+  }
+}
