@@ -2,7 +2,7 @@ require("dotenv").config();
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const APP_PORT = process.env.PORT ?? 3000;
 
@@ -15,6 +15,8 @@ module.exports = {
     output: {
         filename: "app.js",
         path: path.join(__dirname, "web"),
+        publicPath: "/",
+        pathinfo: true,
     },
     resolve: {
         extensions: [".js", ".jsx"],
@@ -27,7 +29,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             "window.PORT": JSON.stringify(APP_PORT),
-            "window.API_URL": JSON.stringify(process.env.API_URL ?? ""),
+            "window.API_URL": JSON.stringify(process.env.API_URL),
         }),
     ],
     externals: {
