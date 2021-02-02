@@ -1,5 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import Search from "./containers/Search/index.js";
 
-const App = () => <p>Hello world</p>;
+const App = () => {
+    const [searchParams, setSearchParams] = useState({ query: "thor" });
+
+    return (
+        <>
+            <Search searchParams={searchParams} />
+        </>
+    );
+};
 
 export default App;

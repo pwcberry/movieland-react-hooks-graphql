@@ -1,7 +1,11 @@
-import { InMemoryCache, ApolloClient, ApolloLink, HttpLink } from "@apollo/client";
+import { InMemoryCache, ApolloClient, HttpLink } from "@apollo/client";
 import { API_URL } from "../constants.js";
 
-export default new ApolloClient({
-    link: ApolloLink.from([new HttpLink({ _uri: `${API_URL}/graphql` })]),
+console.log("API_URL: '%s'", API_URL);
+
+const client = new ApolloClient({
+    link: new HttpLink({ uri: "http://localhost:4001/graphql" }),
     cache: new InMemoryCache(),
 });
+
+export default client;

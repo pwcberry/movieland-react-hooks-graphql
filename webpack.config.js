@@ -9,12 +9,12 @@ const APP_PORT = process.env.PORT ?? 3000;
 module.exports = {
     mode: "development",
     entry: {
-        app: [require.resolve("webpack-dev-server/client") + "?/", require.resolve("webpack/hot/dev-server"), path.resolve(__dirname, "./app/index.jsx")],
+        app: [require.resolve("webpack-dev-server/client") + "?/", require.resolve("webpack/hot/dev-server"), path.resolve(__dirname, "./app/index.js")],
     },
     devtool: "eval-cheap-module-source-map",
     output: {
         filename: "[name].js",
-        path: path.join(__dirname, "web"),
+        path: path.resolve(__dirname, "build"),
         publicPath: "/",
         pathinfo: true,
     },
@@ -49,10 +49,6 @@ module.exports = {
         splitChunks: {
             chunks: "all",
         },
-    },
-    watch: true,
-    watchOptions: {
-        aggregateTimeout: 300,
     },
     stats: {
         all: false,
